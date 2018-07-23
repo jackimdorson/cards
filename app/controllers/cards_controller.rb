@@ -35,12 +35,8 @@ class CardsController < ApplicationController
     @msg = "Please type search word..."
     @card = Array.new
     if request.post? then
-      f = '%' + params[:find] + '%'
-      result = Card.where "title like ? or author like ?", f, f
-      @card.push result.first
-      @card.push result.last
-    
-  
+      f = params[:find].split(',')
+      @card = Card.find(f)
     end
   end
 
