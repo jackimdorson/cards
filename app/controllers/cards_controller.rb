@@ -36,7 +36,9 @@ class CardsController < ApplicationController
     @card = Array.new
     if request.post? then
       f = params[:find].split(',')
-      @card = Card.where('title like ?', '%' + params[:find] + '%').order 'title asc'
+      @card = Card.all.limit(f[0]).offset(f[1]) #limit=いくつ取り出す offset=いくつ飛ばす
+    else
+      @card = Card.all
     end
   end
 
