@@ -18,12 +18,14 @@
         <th>ID</th>
         <th>題名</th>
         <th>著者</th>
+        <th>price</th>
     </tr>
 <% @card.each do |obj| %>
 <tr>
     <td><%= obj.id %></td>
     <td><%= obj.title %></td>
     <td><%= obj.author %></td>
+    <td><%= obj.price %></td>
 </tr>
 <% end %>
 </table>g
