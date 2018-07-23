@@ -36,7 +36,7 @@ class CardsController < ApplicationController
     @card = Array.new
     if request.post? then
       f = params[:find].split(',')
-      @card = Card.find(f)
+      @card = Card.where('title like ?', '%' + params[:find] + '%').order 'title asc'
     end
   end
 
