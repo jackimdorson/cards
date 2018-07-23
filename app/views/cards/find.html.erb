@@ -1,0 +1,29 @@
+<h1>People#find</h1>
+<p><%= @msg %></p>
+<table>
+    <%= form_tag(controller: "cards", action: "find") do %>
+    <tr>
+        <th>Find</th>
+        <td><%= text_field_tag("find") %></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><%= submit_tag("Click") %></td>
+    </tr>
+    <% end %>
+</table>
+<hr>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>題名</th>
+        <th>著者</th>
+    </tr>
+<% @card.each do |obj| %>
+<tr>
+    <td><%= obj.id %></td>
+    <td><%= obj.title %></td>
+    <td><%= obj.author %></td>
+</tr>
+<% end %>
+</table>
