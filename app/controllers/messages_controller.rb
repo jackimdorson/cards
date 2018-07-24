@@ -1,8 +1,9 @@
 class MessagesController < ApplicationController
   layout 'messages'
+
   def index
     @msg = 'Messages.data'
-    @data = 'Messages.all'
+    @data = 'Message.all'
   end
 
   def show
@@ -40,9 +41,10 @@ class MessagesController < ApplicationController
     obj.destroy
     redirect_to '/message'
   end
+
   private
   def message_params
-    params.require(:message).permit(:person_id, :titile, :message)
+    params.require(:message).permit(:card_id, :titile, :author)
   end
 
 
