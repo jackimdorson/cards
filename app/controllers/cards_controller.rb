@@ -36,7 +36,7 @@ class CardsController < ApplicationController
     @card = Array.new
     if request.post? then
       f = params[:find].split(',')
-      @card = Card.all.limit(f[0]).offset(f[1]) #limit=いくつ取り出す offset=いくつ飛ばす
+      @card = Card.all.limit(f[0]).offset(f[1]) #limit=取り出す数 offset=開始位置
     else
       @card = Card.all
     end
