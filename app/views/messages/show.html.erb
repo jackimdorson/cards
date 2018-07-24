@@ -1,0 +1,24 @@
+<h1>Messages#show</h1>
+<p><%= @msg %></p>
+<table>
+    <tr>
+        <th>ID</th>
+        <td><%= @message.id %></td>
+    </tr>
+    <tr>
+        <td>card</td>
+        <td><%= @message.card_id %></td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td><%= @message.title %></td>
+    </tr>
+    <tr>
+        <td>author</td>
+        <td><%= @message.author %></td>
+    </tr>
+    <tr>
+        <td>Created</td>
+        <td><<%= @message.created_at %>/td>
+    </tr>
+</table>

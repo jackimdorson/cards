@@ -35,8 +35,10 @@ class CardsController < ApplicationController
     @msg = "Please type search word..."
     @card = Array.new
     if request.post? then
-      f = params[:find].split ','
-      @card = Card.where "id >= ? and id <= ?", f[0], f[1]
+      f = params[:find].split(',')
+      @card = Card.all.limit(f[0]).offset(f[1]) #limit=取り出す数 offset=開始位置
+    else
+      @card = Card.all
     end
   end
 
