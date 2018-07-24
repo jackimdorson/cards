@@ -31,8 +31,8 @@
         <% if @card.message != nil then %>
             <% @card.message.each do |obj| %>
                 <%= '『' + obj.title + '』' %>
+            <% end %>
         <% end %>
-    <% end %>
     </td>
     </tr>
 </table>

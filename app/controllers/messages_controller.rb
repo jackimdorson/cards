@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new message_params
     if @message.save then
-        redirect_to '/message'
+        redirect_to '/messages'
     else
       render 'add'
     end
@@ -39,7 +39,7 @@ class MessagesController < ApplicationController
   def delete
     obj = Message.find(params[:id])
     obj.destroy
-    redirect_to '/message'
+    redirect_to '/messages'
   end
 
   private
