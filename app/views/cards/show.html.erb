@@ -25,5 +25,15 @@
         <th >コメント</th>
         <td><%= @card.memo %></td>
     </tr>
+    <tr>
+        <th >Message</th>
+        <td>
+        <% if @card.message != nil then %>
+            <% @card.message.each do |obj| %>
+                <%= '『' + obj.title + '』' %>
+        <% end %>
+    <% end %>
+    </td>
+    </tr>
 </table>
 <p class="link"><a href='/cards'>&lt;&lt; *トップページに戻る</a></p>

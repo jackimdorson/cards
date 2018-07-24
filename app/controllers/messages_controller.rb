@@ -2,18 +2,18 @@ class MessagesController < ApplicationController
   layout 'messages'
 
   def index
-    @msg = 'Messages.data'
-    @data = 'Message.all'
+    @msg = 'Message.data'
+    @data = Message.all
   end
 
   def show
     @msg = 'Indexed data'
-    @message = 'Message.find(params[:id])'
+    @message = Message.find(params[:id])
   end
 
   def add
     @msg = "Message data"
-    @message = "Message.new"
+    @message = Message.new
   end
 
   def create
@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
 
   def edit
     @msg = "edit data.[id = ''+ params[:id] + '']"
-    @message = "Message.find(params[:id])"
+    @message = Message.find(params[:id])
   end
 
   def update

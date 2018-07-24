@@ -1,3 +1,4 @@
 class Message < ApplicationRecord
-    validates :message, presence: { message: 'を書いてください。'}
+    validates :author, presence: { author: 'を書いてください。'}
+    belongs_to :card
 end
