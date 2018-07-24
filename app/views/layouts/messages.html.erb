@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <head>
-    <title>Cards</title>
+    <title>RailsApp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "cards", media:"all",
+    <%= stylesheet_link_tag "messages",
         "data-turbolinks-track": "reload" %>
 
-     <%= javascript_include_tag "cards", 
+     <%= javascript_include_tag "messages", 
         "data-turbolinks-track": "reload" %>
 </head>
 
 <body>
-    <div class="card">
     <%= yield %>
     </div>
 </body>
