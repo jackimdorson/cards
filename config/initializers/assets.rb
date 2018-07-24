@@ -17,4 +17,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( cards.css)
 Rails.application.config.assets.precompile += %w( cards.js)
-
+Rails.application.config.assets.precompile += %w( messages.css)
+Rails.application.config.assets.precompile += %w( messages.js)
